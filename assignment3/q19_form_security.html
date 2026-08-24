@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 19 - Form Security Attributes</title>
+</head>
+<body>
+
+    <h1>Secure Form Example</h1>
+
+    <!-- autocomplete="off" prevents the browser from storing/suggesting previous entries -->
+    <form action="#" method="post" autocomplete="off">
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="cardnumber">Card Number:</label>
+        <input type="text" id="cardnumber" name="cardnumber" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- Note explaining the security benefit of autocomplete="off" -->
+    <p>
+        Turning off autocomplete prevents sensitive information (like passwords
+        or card numbers) from being stored and auto-suggested by the browser,
+        which reduces the risk of that data being exposed to anyone else who
+        uses the same device or browser profile.
+    </p>
+
+</body>
+</html>

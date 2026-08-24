@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 16 - URI Encoding</title>
+</head>
+<body>
+
+    <h1>URI Encoding Demonstration</h1>
+
+    <p>Original (unencoded) URL text: https://example.com/search?query=HTML & CSS</p>
+
+    <!-- 
+        The link below uses the correctly URI-encoded version of the URL above.
+        Spaces are encoded as %20, so "HTML & CSS" becomes "HTML%20%26%20CSS"
+        (the & symbol itself is also encoded as %26 since & is a reserved
+        character used to separate query parameters).
+    -->
+    <p>
+        <a href="https://example.com/search?query=HTML%20%26%20CSS">
+            https://example.com/search?query=HTML%20%26%20CSS
+        </a>
+    </p>
+
+</body>
+</html>
