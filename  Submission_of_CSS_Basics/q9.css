@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ece7dd;   /* background color for the page */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 30px;          /* padding around main content area */
+  background-color: #fdfcf8;
+}
+
+/* ===== Heading spanning all columns ===== */
+.main-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #1a1a1a;
+  padding-bottom: 15px;
+  column-span: all;   /* makes heading span across all newspaper columns */
+}
+
+/* ===== Multi-column text layout ===== */
+.columns-wrapper {
+  column-count: 3;        /* 3 vertical text columns */
+  column-gap: 30px;       /* space between columns */
+  column-rule: 1px solid #ccc; /* thin line between columns */
+  text-align: justify;    /* justified text like real newspapers */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.columns-wrapper p {
+  margin-bottom: 15px;
+}
+
+/* ===== Floated image inside the columns ===== */
+.float-img {
+  width: 180px;
+  float: left;             /* text wraps around this image */
+  margin: 0 15px 10px 0;
+  border-radius: 4px;
+}
