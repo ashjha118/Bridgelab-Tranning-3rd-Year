@@ -1,0 +1,55 @@
+/* ===== General styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+  color: #222;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Flexbox centers boxes both vertically and horizontally ===== */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  min-height: 70vh;      /* vh unit used for container height */
+  padding: 30px;
+}
+
+.box {
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Box 1: sized using px units */
+.box-px {
+  width: 200px;
+  height: 200px;
+  background-color: #e74c3c;
+}
+
+/* Box 2: sized using % and vh units, with max-width limiting growth */
+.box-percent {
+  width: 40%;
+  height: 40vh;
+  max-width: 300px;
+  background-color: #2980b9;
+}
+
+/* Box 3: sized using em units, with min-height and overflow demonstrated */
+.box-em {
+  width: 15em;
+  min-height: 10em;
+  background-color: #27ae60;
+  overflow: auto;   /* scrollbar appears if content exceeds box size */
+}
