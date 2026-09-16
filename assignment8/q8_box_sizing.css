@@ -1,0 +1,153 @@
+/* Q8 - Box-Sizing Comparison */
+/* NOTE: We intentionally do NOT apply box-sizing reset globally
+   so the content-box demo shows the default browser behaviour. */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+header p  { opacity: 0.7; font-size: 0.95rem; }
+
+code {
+  background: #334155;
+  color: #7dd3fc;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Center both boxes side by side */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+/* Shared styles for both demo boxes */
+.box {
+  width: 300px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tag-alt {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.size-info {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+  font-size: 0.88rem;
+  line-height: 2;
+}
+
+.rule {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ── content-box (default) ── */
+.content-box-demo {
+  box-sizing: content-box;   /* default — padding is EXTRA */
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+  /* Visual width will be 300 + 30 + 30 = 360px */
+}
+
+.content-box-demo .size-info {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.content-box-demo ul { color: #7f1d1d; }
+
+/* ── border-box ── */
+.border-box-demo {
+  box-sizing: border-box;    /* padding is INCLUDED in width */
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  /* Visual width stays exactly 300px */
+}
+
+.border-box-demo .size-info {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.border-box-demo ul { color: #14532d; }
+
+/* Explanation section */
+.explanation {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.explanation h2 {
+  font-size: 1rem;
+  color: #4f46e5;
+  margin-bottom: 0.8rem;
+}
+
+.explanation p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  main { flex-direction: column; align-items: center; }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e293b;
+  color: #64748b;
+  font-size: 0.85rem;
+}

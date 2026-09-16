@@ -1,0 +1,124 @@
+/* Q2 - Tooltip Demo Stylesheet */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+header p  { opacity: 0.7; font-size: 0.95rem; }
+
+/* Center all tooltips using Flexbox */
+main {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+/* Wrapper holds the icon + tooltip */
+.tooltip-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Icon button style */
+.icon {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem 1.6rem;
+  font-size: 1.1rem;
+  cursor: default;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: border-color 0.3s, transform 0.2s;
+  user-select: none;
+}
+
+.icon:hover {
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+/* Tooltip built using ::before (the box) and ::after (the arrow) */
+
+/* Tooltip text box */
+.tooltip-wrap::before {
+  content: attr(data-tip);          /* pulls text from data-tip attribute via parent */
+  position: absolute;
+  bottom: calc(100% + 12px);       /* above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #f1f5f9;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateX(-50%) translateY(6px);
+  z-index: 10;
+}
+
+/* Arrow below the tooltip box */
+.tooltip-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #0f172a;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* Show on hover */
+.tooltip-wrap:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-wrap:hover::after {
+  opacity: 1;
+}
+
+/* data-tip attribute needs to be on the wrapper for ::before to read it */
+.tooltip-wrap[data-tip]::before {
+  content: attr(data-tip);
+}
+
+/* Fix: move data-tip to the wrapper div in HTML (already done above) */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0f172a;
+  color: #64748b;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,204 @@
+/* Q9 - Combined Effects: pseudo-classes + transitions + transforms */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  background: #020617;
+}
+
+header h1 { font-size: 1.8rem; color: #a5b4fc; margin-bottom: 0.4rem; }
+header p  { color: #475569; font-size: 0.95rem; }
+
+code {
+  background: #1e293b;
+  color: #67e8f9;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+}
+
+/* Flex layout for all cards */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  justify-content: center;
+}
+
+/* Base card */
+.effect-card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 1.8rem 1.5rem;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  /* combined transition on the card itself */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.icon-big { font-size: 2.2rem; }
+
+.effect-card h2 { font-size: 1rem; color: #a5b4fc; }
+.effect-card p  { font-size: 0.82rem; color: #64748b; line-height: 1.5; }
+
+/* Base button */
+.btn {
+  margin-top: 0.5rem;
+  padding: 0.55rem 1.3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+/* ── 1. Grow + Glow ── */
+.btn-grow {
+  background: #6366f1;
+  color: #fff;
+}
+
+.btn-grow:hover {
+  transform: scale(1.12);
+  background: #4f46e5;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.7);
+}
+
+.btn-grow:active { transform: scale(1.05); }
+
+/* ── 2. Rotate Icon + Slide Card ── */
+.rotate-icon {
+  transition: transform 0.4s ease;
+  display: inline-block;
+}
+
+.slide-card:hover .rotate-icon {
+  transform: rotate(360deg);
+}
+
+.btn-slide {
+  background: #f59e0b;
+  color: #1c1917;
+}
+
+.btn-slide:hover {
+  background: #d97706;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+}
+
+.slide-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ── 3. Color Shift ── */
+.btn-color {
+  background: #ec4899;
+  color: #fff;
+}
+
+.color-card:hover {
+  background: #831843;
+}
+
+.btn-color:hover {
+  background: #be185d;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.5);
+}
+
+/* ── 4. Flip Effect ── */
+.flip-wrap {
+  width: 160px;
+  height: 60px;
+  position: relative;
+  perspective: 600px;
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+}
+
+.flip-front {
+  background: #6366f1;
+  color: #fff;
+  transform: rotateY(0deg);
+}
+
+.flip-back {
+  background: #22d3ee;
+  color: #0f172a;
+  transform: rotateY(180deg);
+}
+
+.flip-card-outer:hover .flip-front { transform: rotateY(-180deg); }
+.flip-card-outer:hover .flip-back  { transform: rotateY(0deg); }
+
+/* ── 5. Active Press ── */
+.btn-active {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-active:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+}
+
+.btn-active:active {
+  transform: scale(0.9);
+  background: #7f1d1d;
+  box-shadow: none;
+}
+
+/* ── 6. Focus Glow Input ── */
+.glow-input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glow-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+  transform: scaleX(1.03);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #020617;
+  color: #334155;
+  font-size: 0.85rem;
+}

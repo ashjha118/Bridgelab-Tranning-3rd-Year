@@ -1,0 +1,137 @@
+/* Q4 - CSS Selectors Practice */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+header {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 { font-size: 1.7rem; margin-bottom: 0.4rem; }
+header p  { opacity: 0.7; font-size: 0.95rem; }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.4rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.box h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #4f46e5;
+  border-bottom: 2px solid #e0e7ff;
+  padding-bottom: 0.4rem;
+}
+
+code {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.88rem;
+}
+
+/* ── Element selector: targets all <p> elements ── */
+p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* ── Class selector: targets elements with class="highlight" ── */
+.highlight {
+  background: #fef9c3;
+  border-left: 4px solid #eab308;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  color: #713f12;
+}
+
+/* ── ID selector: targets element with id="special" ── */
+#special {
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  color: #14532d;
+}
+
+/* ── Attribute selector: targets <a> with target="_blank" ── */
+a[target="_blank"] {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: underline dotted;
+}
+
+a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+/* ── Child combinator: direct child <p> of .parent ── */
+.parent > p {
+  background: #ffe4e6;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  color: #881337;
+}
+
+/* ── Adjacent sibling: <p> immediately after .sib-head ── */
+.sib-head + p {
+  background: #fce7f3;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  color: #831843;
+}
+
+/* ── General sibling: all <p> after .gen-head ── */
+.gen-head ~ p {
+  background: #ecfeff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  color: #164e63;
+  margin-bottom: 0.4rem;
+}
+
+/* ── Descendant selector: <li> inside .ancestor ── */
+.ancestor li {
+  background: #f0fdf4;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  color: #166534;
+  margin-bottom: 0.3rem;
+  list-style: none;
+  border-left: 3px solid #22c55e;
+}
+
+h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #6b7280;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e293b;
+  color: #64748b;
+  font-size: 0.85rem;
+}

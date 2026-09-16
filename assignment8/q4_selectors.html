@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q4 - CSS Selectors Practice</title>
+  <link rel="stylesheet" href="q4_selectors.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+    <p>See how different CSS selectors target elements.</p>
+  </header>
+
+  <main>
+    <!-- Element selector -->
+    <section class="box">
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled using the <code>p</code> element selector.</p>
+      <p>Another paragraph — same element selector applies here too.</p>
+    </section>
+
+    <!-- Class selector -->
+    <section class="box">
+      <h2>Class Selector</h2>
+      <p class="highlight">This uses <code>.highlight</code> class selector.</p>
+      <p>This paragraph has no class — normal style applies.</p>
+    </section>
+
+    <!-- ID selector -->
+    <section class="box">
+      <h2>ID Selector</h2>
+      <p id="special">This uses <code>#special</code> ID selector — unique element.</p>
+      <p>Normal paragraph beside it.</p>
+    </section>
+
+    <!-- Attribute selector -->
+    <section class="box">
+      <h2>Attribute Selector</h2>
+      <a href="https://example.com" target="_blank">External link (target="_blank")</a><br/><br/>
+      <a href="/internal">Internal link (no target)</a>
+    </section>
+
+    <!-- Child combinator > -->
+    <section class="box">
+      <h2>Child Combinator <code>&gt;</code></h2>
+      <div class="parent">
+        <p>Direct child paragraph — styled with <code>div &gt; p</code>.</p>
+        <div>
+          <p>Nested deeper — NOT a direct child, not styled.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adjacent sibling + -->
+    <section class="box">
+      <h2>Adjacent Sibling <code>+</code></h2>
+      <h3 class="sib-head">Heading</h3>
+      <p>This paragraph immediately follows the heading — styled with <code>h3 + p</code>.</p>
+      <p>This one is not the immediate sibling — normal.</p>
+    </section>
+
+    <!-- General sibling ~ -->
+    <section class="box">
+      <h2>General Sibling <code>~</code></h2>
+      <h3 class="gen-head">Heading</h3>
+      <p>First sibling after heading — styled.</p>
+      <p>Second sibling — also styled with <code>h3 ~ p</code>.</p>
+    </section>
+
+    <!-- Descendant selector -->
+    <section class="box">
+      <h2>Descendant Selector</h2>
+      <div class="ancestor">
+        <ul>
+          <li>Descendant list item — styled via <code>.ancestor li</code>.</li>
+          <li>Another descendant item.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 — Q4 | CSS Selectors Practice</p>
+  </footer>
+</body>
+</html>
