@@ -1,0 +1,246 @@
+/* Q10 - Complete Mini UI Layout */
+
+* {
+  box-sizing: border-box;   /* border-box applied globally */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(160deg, #e0e7ff 0%, #f0fdf4 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #1e293b;
+}
+
+/* ── Header ── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #1e293b;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo { font-size: 1.6rem; }
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a5b4fc;
+  letter-spacing: 0.02em;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.nav-link:hover {
+  color: #e2e8f0;
+  border-bottom-color: #6366f1;
+}
+
+.nav-link.active {
+  color: #a5b4fc;
+  border-bottom-color: #a5b4fc;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Main card */
+.content-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(99, 102, 241, 0.12);
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #e0e7ff;
+}
+
+/* Card header with avatar */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid #a5b4fc;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(99,102,241,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.35);
+}
+
+.card-title h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #1e293b;
+}
+
+.card-title p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+/* ── Form ── */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.02em;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 0.6rem 0.9rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  color: #1e293b;
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  width: 100%;
+}
+
+/* :focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* :hover on inputs */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #a5b4fc;
+}
+
+textarea { resize: vertical; }
+
+/* ── Buttons ── */
+.btn-row {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover  { transform: translateY(-2px); }
+.btn:active { transform: scale(0.97); }
+.btn:focus  { outline: none; box-shadow: 0 0 0 3px rgba(99,102,241,0.35); }
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+}
+.btn-primary:hover { background: #3730a3; }
+
+.btn-outline {
+  background: transparent;
+  color: #4f46e5;
+  border-color: #4f46e5;
+}
+.btn-outline:hover { background: #4f46e5; color: #fff; }
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* :disabled */
+.btn:disabled {
+  opacity: 0.6;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e293b;
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .form-row    { flex-direction: column; }
+  .card-header { flex-direction: column; text-align: center; }
+  .content-card { padding: 1.5rem; }
+  header { flex-direction: column; gap: 0.8rem; }
+}

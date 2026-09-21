@@ -1,0 +1,104 @@
+/* ===== General styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  color: #2c3e50;
+  margin: 0;
+}
+
+header, footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* ===== Pseudo-classes ===== */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* :hover pseudo-class */
+.item-list li:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* :nth-child() pseudo-class - styles every even item */
+.item-list li:nth-child(even) {
+  border-left: 5px solid #e67e22;
+}
+
+/* ::before and ::after pseudo-elements */
+.item-list li::before {
+  content: "\1F449  ";   /* adds a pointing hand icon before each item */
+}
+
+.item-list li::after {
+  content: " \2714";     /* adds a checkmark after each item */
+  color: green;
+}
+
+/* ===== Attribute selectors ===== */
+/* Targets only input elements with type="text" */
+input[type="text"] {
+  padding: 8px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+}
+
+/* :focus pseudo-class - changes style when the input is focused */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+/* Targets links whose href starts with "https" */
+a[href^="https"] {
+  color: green;
+  font-weight: bold;
+}
+
+/* ===== Combinators ===== */
+/* Descendant selector: any <p> inside .parent, at any depth */
+.parent p {
+  color: #16a085;
+}
+
+/* Child selector: only direct <p> children of .parent */
+.parent > p {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Adjacent sibling selector: the <p> immediately after an <h3> */
+h3 + p {
+  color: #8e44ad;
+  font-style: italic;
+}
+
+/* General sibling selector: all <p> siblings after an <h3>, at the same level */
+h3 ~ p {
+  border-left: 3px solid #8e44ad;
+  padding-left: 10px;
+}

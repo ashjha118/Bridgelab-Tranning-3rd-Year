@@ -1,0 +1,73 @@
+/* ===== General styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  text-align: center;
+  margin: 0;
+  color: #2c3e50;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Flexbox centers the whole demonstration ===== */
+.demo-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+}
+
+.model-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Each layer of the box model is a different background color/outline */
+.margin-layer {
+  background-color: #f9e79f;   /* represents margin area */
+  outline: 2px dashed #7d6608;
+  padding: 20px;
+}
+
+.border-layer {
+  background-color: #aed6f1;   /* represents border area */
+  border: 6px solid #21618c;
+  padding: 15px;
+}
+
+.padding-layer {
+  background-color: #a9dfbf;   /* represents padding area */
+  padding: 20px;
+}
+
+.content-layer {
+  background-color: #f5b7b1;   /* represents actual content */
+  width: 150px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #922b21;
+}
+
+/* Default content-box: width/height apply only to content,
+   padding and border are added on top of that */
+.content-box {
+  box-sizing: content-box;
+  padding: 10px;
+  border: 4px solid #922b21;
+}
+
+/* border-box: width/height include padding and border,
+   so the box stays the same total size */
+.border-box {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 4px solid #922b21;
+}

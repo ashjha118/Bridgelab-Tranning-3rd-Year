@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 17 - Form with Iframe Result</title>
+</head>
+<body>
+
+    <h1>Submit the Form</h1>
+
+    <!-- 
+        The form's "target" attribute is set to the name of the iframe below.
+        This means when the form is submitted, the response (result.html)
+        loads inside that iframe instead of navigating the whole page away.
+        This works with plain HTML only, no JavaScript needed.
+    -->
+    <form action="result.html" method="get" target="resultFrame">
+        <label for="textinput">Enter text:</label>
+        <input type="text" id="textinput" name="textinput">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- This iframe displays result.html after the form above is submitted -->
+    <iframe name="resultFrame" title="Result Frame" width="400" height="150"></iframe>
+
+</body>
+</html>

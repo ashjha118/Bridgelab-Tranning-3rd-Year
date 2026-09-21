@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q9 - Combined Effects</title>
+  <link rel="stylesheet" href="q9_combined_effects.css" />
+</head>
+<body>
+  <header>
+    <h1>Combined Effects Demo</h1>
+    <p>Pseudo-classes + transitions + transformations working together.</p>
+  </header>
+
+  <main>
+    <!-- Card 1: Grow + Color on Hover -->
+    <div class="effect-card grow-card">
+      <span class="icon-big">🚀</span>
+      <h2>Grow &amp; Glow</h2>
+      <p>Scales up and adds a glowing shadow on <code>:hover</code></p>
+      <button class="btn btn-grow">Hover Me</button>
+    </div>
+
+    <!-- Card 2: Slide + Rotate icon -->
+    <div class="effect-card slide-card">
+      <span class="icon-big rotate-icon">⚡</span>
+      <h2>Rotate &amp; Slide</h2>
+      <p>Icon rotates and card shifts up on <code>:hover</code></p>
+      <button class="btn btn-slide">Hover Me</button>
+    </div>
+
+    <!-- Card 3: Color Shift + Shadow -->
+    <div class="effect-card color-card">
+      <span class="icon-big">🎨</span>
+      <h2>Color Shift</h2>
+      <p>Background and text color transitions on <code>:hover</code></p>
+      <button class="btn btn-color">Hover Me</button>
+    </div>
+
+    <!-- Card 4: Flip Button -->
+    <div class="effect-card flip-card-outer">
+      <span class="icon-big">🔄</span>
+      <h2>Flip Effect</h2>
+      <p>Card flips on <code>:hover</code> using <code>rotateY</code></p>
+      <div class="flip-wrap">
+        <div class="flip-front">Front Side</div>
+        <div class="flip-back">Back Side!</div>
+      </div>
+    </div>
+
+    <!-- Card 5: Ripple-style Active -->
+    <div class="effect-card active-card">
+      <span class="icon-big">💥</span>
+      <h2>Active Press</h2>
+      <p>Shrinks and changes on <code>:active</code> click</p>
+      <button class="btn btn-active">Click Me Hard</button>
+    </div>
+
+    <!-- Card 6: Focus Glow Input -->
+    <div class="effect-card focus-card">
+      <span class="icon-big">✨</span>
+      <h2>Focus Glow</h2>
+      <p>Input glows and transforms on <code>:focus</code></p>
+      <input type="text" class="glow-input" placeholder="Click or Tab here…" />
+    </div>
+  </main>
+
+  <footer>
+    <p>Assignment 8 — Q9 | Combined Effects</p>
+  </footer>
+</body>
+</html>

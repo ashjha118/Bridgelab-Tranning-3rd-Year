@@ -1,0 +1,99 @@
+/* ===== General styling ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Pricing cards aligned horizontally with Flexbox ===== */
+.pricing-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* aligns baseline before featured card grows */
+  gap: 25px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 220px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+  animation: fadeIn 1s ease forwards;                     /* fade-in on load */
+}
+
+/* Middle card: slightly larger and highlighted */
+.featured {
+  width: 260px;
+  padding: 40px 25px;
+  background-color: #2980b9;
+  color: white;
+}
+
+.pricing-card h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price span {
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  text-align: left;
+}
+
+.pricing-card li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.featured li {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Hover: cards rise up */
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Fade-in animation using keyframes ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive: stack cards vertically below 750px ===== */
+@media (max-width: 750px) {
+  .pricing-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

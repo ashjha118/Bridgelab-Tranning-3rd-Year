@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 - Course Registration Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Course Registration Form</h1>
+    </header>
+
+    <main>
+        <form>
+            <!-- Personal Details grouped using fieldset and legend -->
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+            </fieldset>
+
+            <!-- Course Selection grouped using fieldset and legend -->
+            <fieldset>
+                <legend>Course Selection</legend>
+
+                <label for="course">Choose a Course:</label>
+                <select id="course" name="course">
+                    <option value="html">HTML &amp; CSS Fundamentals</option>
+                    <option value="js">JavaScript Programming</option>
+                    <option value="python">Python for Beginners</option>
+                    <option value="dsa">Data Structures &amp; Algorithms</option>
+                </select>
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Register">
+        </form>
+
+        <!-- Course schedule table -->
+        <h2>Available Course Schedules</h2>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Mr. Arjun Verma</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>2:00 PM - 3:30 PM</td>
+                <td>Ms. Neha Kapoor</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>11:00 AM - 12:30 PM</td>
+                <td>Dr. Sameer Khan</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Course Registration Portal.</p>
+    </footer>
+
+</body>
+</html>

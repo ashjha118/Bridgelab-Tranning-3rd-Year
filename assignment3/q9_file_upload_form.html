@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 9 - File Upload Form</title>
+</head>
+<body>
+
+    <h1>File Upload Form</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <label for="fileupload">Choose a file:</label>
+        <!-- The accept attribute restricts the file picker to only .jpg and .png files -->
+        <input type="file" id="fileupload" name="fileupload" accept=".jpg,.png">
+        <br><br>
+
+        <input type="submit" value="Upload">
+
+    </form>
+
+    <!-- Note describing the allowed file types -->
+    <p>Only JPG and PNG image files are allowed for upload.</p>
+
+</body>
+</html>

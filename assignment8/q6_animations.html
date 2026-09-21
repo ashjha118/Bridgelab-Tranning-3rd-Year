@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q6 - CSS Animations</title>
+  <link rel="stylesheet" href="q6_animations.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Animation Demonstration</h1>
+    <p>All animations built using @keyframes — no JavaScript.</p>
+  </header>
+
+  <main>
+    <!-- Animation 1: Moving Box -->
+    <section class="anim-card">
+      <h2>Moving Box</h2>
+      <p>Slides left and right using <code>translateX</code></p>
+      <div class="stage">
+        <div class="moving-box"></div>
+      </div>
+    </section>
+
+    <!-- Animation 2: Bouncing Ball -->
+    <section class="anim-card">
+      <h2>Bouncing Ball</h2>
+      <p>Bounces using <code>translateY</code> with ease-in-out</p>
+      <div class="stage">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+      </div>
+    </section>
+
+    <!-- Animation 3: Color-Changing Text -->
+    <section class="anim-card">
+      <h2>Color Cycling Text</h2>
+      <p>Hue shifts using <code>color</code> keyframes</p>
+      <div class="stage">
+        <p class="color-text">Hello CSS!</p>
+      </div>
+    </section>
+
+    <!-- Animation 4: Spinning Loader -->
+    <section class="anim-card">
+      <h2>Spinning Loader</h2>
+      <p>Rotates with <code>animation-iteration-count: infinite</code></p>
+      <div class="stage">
+        <div class="spinner"></div>
+      </div>
+    </section>
+
+    <!-- Animation 5: Pulse Button -->
+    <section class="anim-card">
+      <h2>Pulse Effect</h2>
+      <p>Scales in/out with <code>animation-direction: alternate</code></p>
+      <div class="stage">
+        <button class="pulse-btn">Live</button>
+      </div>
+    </section>
+
+    <!-- Animation 6: Blinking Text -->
+    <section class="anim-card">
+      <h2>Blinking Cursor</h2>
+      <p>Fades in/out using <code>opacity</code> keyframes with delay</p>
+      <div class="stage">
+        <span class="typing">Typing<span class="cursor">|</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 — Q6 | CSS Animations</p>
+  </footer>
+</body>
+</html>

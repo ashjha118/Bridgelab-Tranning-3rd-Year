@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* ===== Sticky header with navigation ===== */
+.main-header {
+  position: sticky;      /* sticks to top once scrolled to */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(31, 41, 55, 0.95);  /* rgba color with slight transparency */
+  color: #ffffff;
+  padding: 18px 8%;
+  z-index: 50;
+}
+
+.main-header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 0.95rem;
+}
+
+.main-header nav a:hover {
+  color: #93c5fd;
+}
+
+/* ===== Hero section ===== */
+.hero {
+  position: relative;                /* allows centered text to sit on top of image */
+  height: 70vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1400');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== About section: two columns (text + image) ===== */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 8%;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+  border-bottom: 3px outset #4f46e5;  /* outline-style border for variety */
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 260px;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  outline: 4px solid rgba(79, 70, 229, 0.3);  /* outline property, separate from border */
+  outline-offset: 6px;
+}
+
+/* ===== Services section: three boxes ===== */
+.services {
+  background-color: #f3f4f6;
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+.services-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: #ffffff;
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  padding: 30px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.service-box h3 {
+  margin-bottom: 10px;
+  color: #4f46e5;
+}
+
+/* ===== Contact section ===== */
+.contact {
+  padding: 70px 8%;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-form button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #3730a3;
+}
+
+/* ===== Footer ===== */
+.main-footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;   /* demonstrates relative positioning (default flow, offsettable) */
+}

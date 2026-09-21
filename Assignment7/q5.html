@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q5 - Advanced CSS Selectors</title>
+  <link rel="stylesheet" href="q5.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced CSS Selectors Demonstration</h1>
+  </header>
+
+  <main>
+    <section class="list-section">
+      <h2>Pseudo-classes and nth-child</h2>
+      <ul class="item-list">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+        <li>Item Four</li>
+        <li>Item Five</li>
+      </ul>
+    </section>
+
+    <section class="attr-section">
+      <h2>Attribute Selectors</h2>
+      <p>
+        <label for="name">Text Input:</label>
+        <input type="text" id="name" placeholder="Type here (matches [type='text'])">
+      </p>
+      <p>
+        <a href="https://www.anthropic.com">Secure Link (matches [href^="https"])</a><br>
+        <a href="http://example.com">Insecure Link (does not match)</a>
+      </p>
+    </section>
+
+    <section class="combinator-section">
+      <h2>Combinators</h2>
+      <div class="parent">
+        <p>Direct child paragraph (matched by &gt;)</p>
+        <span>
+          <p>Nested paragraph (NOT matched by &gt;, only by descendant selector)</p>
+        </span>
+      </div>
+
+      <h3>Adjacent Sibling (+)</h3>
+      <p>This paragraph is right after the heading above.</p>
+      <p>This second paragraph is not affected by the + combinator.</p>
+
+      <h3>General Sibling (~)</h3>
+      <p>This paragraph is styled by the ~ general sibling selector.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 7 - Question 5</p>
+  </footer>
+</body>
+</html>

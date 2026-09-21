@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2 - Google Map Embed</title>
+</head>
+<body>
+
+    <!-- Heading -->
+    <h1>My City on Google Maps</h1>
+
+    <!-- 
+        The iframe below embeds a Google Map showing a city location.
+        - title: describes the iframe content for accessibility (screen readers)
+        - width and height: set the size of the map
+        - loading="lazy": tells the browser to delay loading the iframe
+          until it is about to enter the visible viewport. This improves
+          initial page load speed and saves bandwidth, since the map is
+          not fetched unless the user actually scrolls to see it.
+    -->
+    <iframe 
+        title="Map showing my city location"
+        src="https://www.google.com/maps?q=New+Delhi,India&output=embed"
+        width="600"
+        height="450"
+        loading="lazy">
+    </iframe>
+
+</body>
+</html>
