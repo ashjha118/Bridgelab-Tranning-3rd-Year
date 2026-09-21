@@ -1,0 +1,97 @@
+/* ===== General reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+/* ===== Overall dashboard grid: Header, Sidebar, Main ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  min-height: 100vh;
+  gap: 15px;
+  animation: loadIn 0.8s ease forwards;  /* simple load animation */
+}
+
+.dashboard-header {
+  grid-area: header;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Main content: cards using Grid ===== */
+.dashboard-main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.dash-card {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: scale up with shadow */
+.dash-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== Load animation ===== */
+@keyframes loadIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive: sidebar moves to top below 750px ===== */
+@media (max-width: 750px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main";
+  }
+
+  .dashboard-main {
+    grid-template-columns: 1fr;
+  }
+}

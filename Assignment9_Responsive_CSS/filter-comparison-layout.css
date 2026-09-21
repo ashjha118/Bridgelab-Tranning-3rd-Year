@@ -1,0 +1,58 @@
+/* ===== General styling ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #2c3e50;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Two images side-by-side on desktop using Flexbox ===== */
+.compare-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.compare-item {
+  margin: 0;
+}
+
+.compare-photo {
+  width: 280px;
+  height: 200px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  transition: filter 0.5s ease;   /* smooth fade of the filter on hover */
+}
+
+/* Right image has a filter applied */
+.filtered {
+  filter: brightness(1.8);
+}
+
+/* On hover, the filter fades away */
+.filtered:hover {
+  filter: none;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== Responsive: stack images vertically below 700px ===== */
+@media (max-width: 700px) {
+  .compare-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
