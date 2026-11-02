@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2 - Product Catalog</title>
+</head>
+<body>
+
+    <header>
+        <h1>Online Store - Product Catalog</h1>
+    </header>
+
+    <main>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <!-- Table header row -->
+            <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+
+            <!-- Product 1 -->
+            <tr>
+                <td><img src="https://via.placeholder.com/80" alt="Wireless Headphones" width="80" height="80"></td>
+                <td>Wireless Headphones</td>
+                <td>Over-ear Bluetooth headphones with noise cancellation</td>
+                <td>&#8377; 2,499</td>
+            </tr>
+
+            <!-- Product 2 -->
+            <tr>
+                <td><img src="https://via.placeholder.com/80" alt="Smart Watch" width="80" height="80"></td>
+                <td>Smart Watch</td>
+                <td>Fitness tracking smart watch with heart-rate monitor</td>
+                <td>&#8377; 3,999</td>
+            </tr>
+
+            <!-- Product 3: uses colspan to merge Description and Price -->
+            <tr>
+                <td><img src="https://via.placeholder.com/80" alt="Laptop Bag" width="80" height="80"></td>
+                <td>Laptop Bag</td>
+                <td colspan="2">Currently on sale - description and price merged (Water-resistant, fits up to 15.6-inch laptops)</td>
+            </tr>
+
+            <!-- Product 4: uses rowspan for shared availability across two variants -->
+            <tr>
+                <td><img src="https://via.placeholder.com/80" alt="T-Shirt Red" width="80" height="80"></td>
+                <td>Cotton T-Shirt (Red)</td>
+                <td>Round neck, 100% cotton, size M/L/XL</td>
+                <td rowspan="2">In Stock</td>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/80" alt="T-Shirt Blue" width="80" height="80"></td>
+                <td>Cotton T-Shirt (Blue)</td>
+                <td>Round neck, 100% cotton, size M/L/XL</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Online Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

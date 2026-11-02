@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q10 - Mini UI Layout</title>
+  <link rel="stylesheet" href="q10_mini_ui.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <span class="logo">🎓</span>
+      <span class="brand-name">StudyHub</span>
+    </div>
+    <nav>
+      <a href="#" class="nav-link active">Dashboard</a>
+      <a href="#" class="nav-link">Courses</a>
+      <a href="#" class="nav-link">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="content-card">
+
+      <!-- Card Header -->
+      <div class="card-header">
+        <img
+          src="https://picsum.photos/seed/student/80/80"
+          alt="Student avatar"
+          class="avatar"
+        />
+        <div class="card-title">
+          <h1>Welcome back, Abhishek!</h1>
+          <p>Complete your profile to unlock all features.</p>
+        </div>
+      </div>
+
+      <!-- Form inside card -->
+      <form class="profile-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Abhishek" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Baghel" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="abhishek@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="branch">Branch</label>
+          <select id="branch">
+            <option value="">Select your branch…</option>
+            <option value="cse">CSE / AIML</option>
+            <option value="ece">ECE</option>
+            <option value="me">Mechanical</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" rows="3" placeholder="Tell us about yourself…"></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Save Profile</button>
+          <button type="reset"  class="btn btn-outline">Reset</button>
+          <button type="button" class="btn btn-secondary" disabled>Delete Account</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Assignment 8 — Q10 | Mini UI Layout &nbsp;|&nbsp; GLA University</p>
+  </footer>
+
+</body>
+</html>

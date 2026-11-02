@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* ===== Fixed header ===== */
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1e293b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 10;
+}
+
+/* ===== Body wrapper below header ===== */
+.dashboard-body {
+  display: flex;             /* sidebar + content side by side */
+  margin-top: 60px;          /* offset for fixed header */
+  min-height: calc(100vh - 60px);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 220px;
+  background-color: #273549;
+  height: calc(100vh - 60px);  /* full remaining screen height */
+  position: sticky;
+  top: 60px;
+  padding: 20px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 14px 25px;
+}
+
+.sidebar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.sidebar li:hover {
+  background-color: #334155;
+}
+
+/* ===== Main content area ===== */
+.content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.content-box {
+  background-color: #ffffff;
+  flex: 1;
+  min-width: 220px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.content-box h2 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+/* ===== Responsive: sidebar stacks above content on small screens ===== */
+@media (max-width: 700px) {
+  .dashboard-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+  }
+}

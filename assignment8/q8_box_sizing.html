@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q8 - Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="q8_box_sizing.css" />
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+    <p>Both boxes have <code>width: 300px</code> and <code>padding: 30px</code> — see the difference.</p>
+  </header>
+
+  <main>
+    <!-- Default box-sizing: content-box -->
+    <section class="box content-box-demo">
+      <h2>content-box <span class="tag">Default</span></h2>
+      <p class="size-info">Rendered width: <strong>360px</strong></p>
+      <ul>
+        <li>Set width: 300px</li>
+        <li>Padding: 30px each side</li>
+        <li>Total = 300 + 30 + 30 = <strong>360px</strong></li>
+        <li>Padding is added <em>outside</em> the width</li>
+      </ul>
+      <div class="rule">
+        <code>box-sizing: content-box;</code>
+      </div>
+    </section>
+
+    <!-- Border-box -->
+    <section class="box border-box-demo">
+      <h2>border-box <span class="tag tag-alt">Recommended</span></h2>
+      <p class="size-info">Rendered width: <strong>300px</strong></p>
+      <ul>
+        <li>Set width: 300px</li>
+        <li>Padding: 30px each side</li>
+        <li>Total = still <strong>300px</strong></li>
+        <li>Padding is included <em>inside</em> the width</li>
+      </ul>
+      <div class="rule">
+        <code>box-sizing: border-box;</code>
+      </div>
+    </section>
+  </main>
+
+  <section class="explanation">
+    <h2>Why does this matter?</h2>
+    <p>
+      With <code>content-box</code>, adding padding increases the total size of the element, 
+      which can break layouts unexpectedly. With <code>border-box</code>, the width stays 
+      exactly as declared — padding is absorbed inside — making layouts far more predictable.
+      That's why most CSS resets use <code>* { box-sizing: border-box; }</code>.
+    </p>
+  </section>
+
+  <footer>
+    <p>Assignment 8 — Q8 | Box-Sizing Comparison</p>
+  </footer>
+</body>
+</html>

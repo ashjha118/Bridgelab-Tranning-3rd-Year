@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fafafa;
+}
+
+/* ===== Header & Nav ===== */
+header {
+  background-color: #2d2424;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;   /* large heading */
+  font-weight: 700;    /* bold weight */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #4a3838;
+  padding: 15px 0;
+}
+
+nav a {
+  color: #f5e9e2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Sections (full width) ===== */
+.section {
+  width: 100%;
+  padding: 80px 10%;      /* padding creates breathing room */
+  margin-bottom: 4px;     /* small margin separates sections visually */
+  border-bottom: 3px solid #d9c7b8; /* border to define section end */
+  color: #2d2424;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section h3 {
+  font-size: 1.6rem;
+  font-weight: 400;   /* lighter weight for variety */
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* ===== Linear gradient section ===== */
+.gradient-linear {
+  background: linear-gradient(135deg, #ffe1c6 0%, #ffb385 100%);
+}
+
+/* ===== Radial gradient section ===== */
+.gradient-radial {
+  background: radial-gradient(circle at center, #d6f5e3 0%, #8fd9b6 100%);
+}
+
+/* ===== Fixed background image sections (parallax-like effect) ===== */
+.fixed-bg-1 {
+  background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;   /* image stays still while page scrolls */
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.fixed-bg-2 {
+  background-image: url('https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=1200');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #2d2424;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}

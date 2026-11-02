@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Layout - Box Model & Positioning</title>
+  <link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+  <!-- Sticky header with navigation -->
+  <header class="main-header">
+    <h2 class="brand">BrightStudio</h2>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section -->
+  <section id="hero" class="hero">
+    <h1>Welcome to BrightStudio</h1>
+    <p>We design bright ideas into beautiful digital experiences.</p>
+  </section>
+
+  <!-- About section: two columns -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        BrightStudio is a small creative team passionate about clean design
+        and thoughtful development. We believe great websites balance
+        beauty with simplicity, helping ideas reach people clearly.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" alt="Team working together">
+    </div>
+  </section>
+
+  <!-- Services section: three boxes -->
+  <section id="services" class="services">
+    <h2 class="section-heading">Our Services</h2>
+    <div class="services-row">
+      <div class="service-box">
+        <h3>Web Design</h3>
+        <p>Modern, responsive websites tailored to your brand.</p>
+      </div>
+      <div class="service-box">
+        <h3>Branding</h3>
+        <p>Logos and visual identities that tell your story.</p>
+      </div>
+      <div class="service-box">
+        <h3>Consulting</h3>
+        <p>Strategic guidance to grow your digital presence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section: simple form -->
+  <section id="contact" class="contact">
+    <h2 class="section-heading">Get In Touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2026 BrightStudio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

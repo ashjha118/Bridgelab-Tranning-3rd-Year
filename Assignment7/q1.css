@@ -1,0 +1,68 @@
+/* ===== General page styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+  text-align: center;
+}
+
+header {
+  padding: 30px 20px;
+}
+
+/* ===== Flexbox used to align boxes horizontally ===== */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;               /* wraps boxes on smaller screens */
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* ===== Common box styling ===== */
+.box {
+  width: 200px;
+  background-color: #ffffff;
+  border-width: 4px;
+  border-radius: 15px;           /* rounded corners */
+  transition: border-color 0.4s ease, transform 0.3s ease; /* smooth hover transition */
+}
+
+/* Different border styles as required */
+.solid {
+  border-style: solid;
+  border-color: #3498db;
+  padding: 10px;                 /* different padding values */
+}
+
+.dashed {
+  border-style: dashed;
+  border-color: #e67e22;
+  padding: 20px;
+}
+
+.double {
+  border-style: double;
+  border-color: #27ae60;
+  padding: 15px;
+}
+
+.groove {
+  border-style: groove;
+  border-color: #8e44ad;
+  padding: 25px;
+}
+
+/* ===== Hover effect: border color change + slight lift ===== */
+.box:hover {
+  border-color: #e74c3c;
+  transform: translateY(-5px);
+}
+
+footer {
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}

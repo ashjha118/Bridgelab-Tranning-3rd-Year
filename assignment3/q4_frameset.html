@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="en">
+<head>
+    <title>Question 4 - Frameset Layout</title>
+</head>
+
+<!-- 
+    This frameset divides the browser window into two horizontal rows.
+    The top row (20% of height) shows navigation links.
+    The bottom row (80% of height) shows a welcome message.
+    Note: <frameset> is an older/obsolete HTML feature, kept here only
+    because the assignment specifically requires it.
+-->
+<frameset rows="20%,80%">
+    <frame src="q4_top.html" title="Navigation Frame">
+    <frame src="q4_bottom.html" title="Welcome Message Frame">
+    <noframes>
+        <body>
+            <p>Your browser does not support frames.</p>
+        </body>
+    </noframes>
+</frameset>
+
+</html>

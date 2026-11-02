@@ -1,0 +1,62 @@
+/* ===== General styling ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #2c3e50;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Grid layout with three boxes ===== */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+  text-align: left;
+}
+
+.principle-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.principle-box h2 {
+  margin-top: 0;
+}
+
+.principle-box code {
+  display: block;
+  margin-top: 10px;
+  background-color: #ecf0f1;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Hover: background gradient and text color change */
+.principle-box:hover {
+  background: linear-gradient(135deg, #2980b9, #8e44ad);
+  color: white;
+}
+
+.principle-box:hover code {
+  background-color: rgba(255,255,255,0.15);
+  color: white;
+}
+
+/* ===== Responsive: single column below 600px ===== */
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

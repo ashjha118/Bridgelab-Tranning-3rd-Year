@@ -1,0 +1,63 @@
+/* ===== General styling ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #2c3e50;
+  text-align: center;
+}
+
+header, footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+/* ===== Cheat sheet grid: 2-3 columns on large screens ===== */
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 30px;
+  text-align: left;
+}
+
+.cheat-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cheat-box h2 {
+  margin-top: 0;
+  color: #2980b9;
+}
+
+.cheat-box p {
+  line-height: 1.6;
+}
+
+/* Hover and transition effects for interactivity */
+.cheat-box:hover {
+  background-color: #eaf2f8;
+  transform: translateY(-5px);
+}
+
+/* ===== Responsive: stacked key/value rows below 700px ===== */
+@media (max-width: 700px) {
+  .cheat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cheat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cheat-box h2 {
+    font-size: 1.1em;
+  }
+}

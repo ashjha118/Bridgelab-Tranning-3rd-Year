@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q1 - Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="q1_pseudo_classes.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Pseudo-Classes Demonstration</h1>
+    <p>Hover, click, and focus on the elements below to see pseudo-classes in action.</p>
+  </header>
+
+  <main>
+    <!-- :hover on link -->
+    <section class="card">
+      <div class="label">
+        <code>:hover</code>
+        <p>Changes color when mouse is over the element.</p>
+      </div>
+      <div class="demo">
+        <a href="#" class="demo-link">Hover over me</a>
+      </div>
+    </section>
+
+    <!-- :focus on input -->
+    <section class="card">
+      <div class="label">
+        <code>:focus</code>
+        <p>Activates when the element receives keyboard/click focus.</p>
+      </div>
+      <div class="demo">
+        <input type="text" placeholder="Click or Tab here" class="demo-input" />
+      </div>
+    </section>
+
+    <!-- :active on button -->
+    <section class="card">
+      <div class="label">
+        <code>:active</code>
+        <p>Triggered while the element is being clicked/pressed.</p>
+      </div>
+      <div class="demo">
+        <button class="demo-btn">Click and Hold</button>
+      </div>
+    </section>
+
+    <!-- :nth-child on list -->
+    <section class="card">
+      <div class="label">
+        <code>:nth-child()</code>
+        <p>Selects elements based on their position among siblings.</p>
+      </div>
+      <div class="demo">
+        <ul class="demo-list">
+          <li>Item 1 (odd)</li>
+          <li>Item 2 (even)</li>
+          <li>Item 3 (odd)</li>
+          <li>Item 4 (even)</li>
+          <li>Item 5 (odd)</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 — Q1 | CSS Pseudo-Classes</p>
+  </footer>
+</body>
+</html>

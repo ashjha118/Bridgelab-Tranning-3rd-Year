@@ -1,0 +1,58 @@
+/* ===== General styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf0f1;
+  text-align: center;
+  margin: 0;
+  color: #2c3e50;
+}
+
+header, footer {
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+header h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);  /* text-shadow on heading */
+}
+
+/* ===== Flexbox arranges cards in a single row ===== */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.card {
+  background-color: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
+}
+
+.card h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Different box-shadow styles for each card */
+.card1 {
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.card2 {
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+}
+
+.card3 {
+  box-shadow: 0 0 15px rgba(52,152,219,0.7);
+}
+
+/* On hover, cards lift up with a bigger shadow */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}

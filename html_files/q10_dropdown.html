@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10 - Dropdown-based Selection Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Travel Preference Selector</h1>
+    </header>
+
+    <main>
+        <form>
+            <!-- Country dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="india" selected>India</option>
+                <option value="usa">USA</option>
+                <option value="japan">Japan</option>
+                <option value="france">France</option>
+            </select><br><br>
+
+            <!-- State dropdown -->
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option value="up" selected>Uttar Pradesh</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="kerala">Kerala</option>
+                <option value="goa">Goa</option>
+            </select><br><br>
+
+            <!-- City dropdown -->
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="bareilly" selected>Bareilly</option>
+                <option value="lucknow">Lucknow</option>
+                <option value="agra">Agra</option>
+                <option value="varanasi">Varanasi</option>
+            </select><br><br>
+
+            <!-- Favorite Tourist Place dropdown -->
+            <label for="place">Favorite Tourist Place:</label>
+            <select id="place" name="place">
+                <option value="tajmahal" selected>Taj Mahal</option>
+                <option value="redfort">Red Fort</option>
+                <option value="qutubminar">Qutub Minar</option>
+                <option value="hawamahal">Hawa Mahal</option>
+            </select>
+        </form>
+
+        <!-- Summary paragraph -->
+        <p>Based on the selections above, the chosen destination is Bareilly, Uttar Pradesh,
+           India, with the Taj Mahal marked as the favorite tourist place to visit.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Travel Preference Selector.</p>
+    </footer>
+
+</body>
+</html>

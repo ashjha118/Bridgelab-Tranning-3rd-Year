@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q8 - Box Model Exploration Page</title>
+  <link rel="stylesheet" href="q8.css">
+</head>
+<body>
+  <header>
+    <h1>Box Model Exploration</h1>
+  </header>
+
+  <main class="demo-area">
+    <section class="model-group">
+      <h2>Default box-sizing: content-box</h2>
+      <div class="margin-layer">
+        Margin
+        <div class="border-layer">
+          Border
+          <div class="padding-layer">
+            Padding
+            <div class="content-layer content-box">Content</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="model-group">
+      <h2>box-sizing: border-box</h2>
+      <div class="margin-layer">
+        Margin
+        <div class="border-layer">
+          Border
+          <div class="padding-layer">
+            Padding
+            <div class="content-layer border-box">Content</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 7 - Question 8</p>
+  </footer>
+</body>
+</html>
